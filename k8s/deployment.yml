@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asteroids
+  labels: { app: asteroids }
+spec:
+  replicas: 2
+  selector: { matchLabels: { app: asteroids } }
+  template:
+    metadata: { labels: { app: asteroids } }
+    spec:
+      containers:
+      - name: web
+        image: REPLACE_WITH_ECR_URI_OR_LOCAL   # e.g. 123456789012.dkr.ecr.ca-central-1.amazonaws.com/asteroids:0.1.0
+        ports: [{ containerPort: 8080 }]
+        readinessProbe:
+          httpGet: { path: /readyz, port: 8080 }
+          initialDelaySeconds: 3
+        livenessProbe:
+          httpGet: { path: /healthz, port: 8080 }
+          initialDelaySeconds: 10
+        resources:
+          requests: { cpu: "50m", memory: "64Mi" }
+          limits: { cpu: "250m", memory: "128Mi" }

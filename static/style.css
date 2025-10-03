@@ -1,0 +1,7 @@
+html, body { margin: 0; height: 100%; background: #000; color: #ddd; font-family: system-ui, sans-serif; }
+#hud {
+  position: absolute; top: 10px; left: 10px; z-index: 2; display: flex; gap: 18px; align-items: center;
+  background: rgba(0,0,0,.4); padding: 8px 12px; border-radius: 8px; border: 1px solid #333;
+}
+#hud .hint { color: #aaa; font-size: 12px; }
+canvas { display: block; margin: 0 auto; background: #000; }
