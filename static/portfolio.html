@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ryan Winters</title>
+<link rel="stylesheet" href="/static/style.css">
+<style>
+  body{background:#0b0b0b;color:#e6e6e6;font-family:system-ui,Segoe UI,Roboto,Ubuntu,sans-serif}
+  .wrap{max-width:920px;margin:48px auto;padding:0 16px}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+  .brand{font-size:24px;font-weight:600}
+  .btn{display:inline-block;padding:10px 16px;border:1px solid #444;border-radius:10px;text-decoration:none;color:#e6e6e6}
+  .btn:hover{background:#111}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:800px){.grid{grid-template-columns:1fr}}
+  .card{border:1px solid #222;border-radius:14px;padding:18px;background:linear-gradient(180deg,#0f0f13,#0a0a0c)}
+  h1{font-size:28px;margin:0 0 8px}
+  p{color:#b8b8b8}
+</style>
+</head><body>
+<div class="wrap">
+  <header>
+    <div class="brand">Ryan Winters</div>
+    <nav>
+      <a class="btn" href="/">Portfolio</a>
+      <a class="btn" href="/play">Play Asteroids</a>
+    </nav>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h1>Infra-focused Tech Lead</h1>
+      <p>EKS • IaC • CI/CD • Observability • SSO/IdP • Cost & reliability.</p>
+      <p>Demo app runs on FastAPI/ALB/EKS. Source on GitHub.</p>
+      <p><a class="btn" href="/play">▶ Play Asteroids</a></p>
+    </div>
+    <div class="card">
+      <h2>Highlights</h2>
+      <ul>
+        <li>EKS with ALB, TLS, OIDC CI/CD</li>
+        <li>Zero long-lived AWS keys (GitHub OIDC)</li>
+        <li>Health/ready endpoints; probes in K8s</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</body></html>
